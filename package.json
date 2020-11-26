@@ -1,5 +1,5 @@
 {
-  "name": "upgrade-pc",
+  "name": "coursework-db",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dnagafonov/e-commerce-project.git"
+    "url": "git+https://github.com/dnagafonov/coursework-db.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dnagafonov/e-commerce-project/issues"
+    "url": "https://github.com/dnagafonov/coursework-db/issues"
   },
-  "homepage": "https://github.com/dnagafonov/e-commerce-project#readme",
+  "homepage": "https://github.com/dnagafonov/coursework-db#readme",
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",

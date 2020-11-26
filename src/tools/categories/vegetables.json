@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Обычные",
+    "path": "/production/vegetables/basic",
+    "img": "https://i.ibb.co/bBFSVX4/Bv212v1-Imeni-1.png"
+  },
+  {
+    "name": "Экзотика",
+    "path": "/production/vegetables/exotic",
+    "img": "https://i.ibb.co/XZ11dmG/Bea323a2z-Imeni-1.png"
+  }
+]

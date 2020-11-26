@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Цветы",
+    "path": "/production/flowers",
+    "img": "https://i.ibb.co/N1ZxXnF/1.png"
+  },
+  {
+    "name": "Овощи",
+    "path": "/production/vegetables",
+    "img": "https://i.ibb.co/WP4shXs/2.png"
+  },
+  {
+    "name": "Видеокарты",
+    "path": "/production/fruits",
+    "img": "https://i.ibb.co/6RV56m2/3.png"
+  },
+  {
+    "name": "Другое",
+    "path": "/production/other",
+    "img": "https://i.ibb.co/dfKhwfH/4.png"
+  }
+]

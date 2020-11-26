@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Обычные",
+    "path": "/production/fruits/basic",
+    "img": "https://i.ibb.co/18zGN5q/Bez-Im1d1d1dd1eni-1.png"
+  },
+  {
+    "name": "Экзотика",
+    "path": "/production/fruits/exotic",
+    "img": "https://i.ibb.co/Jq4R05b/Bez-Imeni-11d1d.png"
+  }
+]
