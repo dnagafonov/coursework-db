@@ -13,6 +13,7 @@ import ScrollToTop from "../common/scroll-to-top/scroll-to-top";
 
 import "react-toastify/dist/ReactToastify.css";
 import "./app.scss";
+import Account from "../Account/account";
 
 const CategoriesContainer = React.lazy(() => import("../categories/categories-container"));
 const GoodsContainer = React.lazy(() => import("../goods/goods-container"));
@@ -37,6 +38,9 @@ const App = () => {
                 ))
               )
               .flat()}
+            <Route exact path="/account">
+              <Account />
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>
@@ -57,23 +61,22 @@ const pages = [
   {
     component: CategoriesContainer,
     paths: [
-      "/components",
-      "/components/processors",
-      "/components/motherboards",
-      "/components/ram",
+      "/products",
+      "/products/flowers",
+      "/products/vegetables",
+      "/products/fruits",
     ],
   },
   {
     component: GoodContainer,
     paths: [
-      "/components/processors/lga2011/:id",
-      "/components/processors/v3/:id",
-      "/components/motherboards/lga2011/:id",
-      "/components/motherboards/v3/:id",
-      "/components/ram/ddr3/:id",
-      "/components/ram/ddr4/:id",
-      "/components/ram/server-ddr3/:id",
-      "/components/videocards/all/:id",
+      "/products/flowers/basic/:id",
+      "/products/flowers/exotic/:id",
+      "/products/vegetables/basic/:id",
+      "/products/vegetables/exotic/:id",
+      "/products/fruits/basic/:id",
+      "/products/fruits/exotic/:id",
+      "/products/other/:id",
     ],
   },
   {
@@ -83,15 +86,13 @@ const pages = [
   {
     component: GoodsContainer,
     paths: [
-      "/sets",
-      "/components/processors/lga2011",
-      "/components/processors/v3",
-      "/components/motherboards/lga2011",
-      "/components/motherboards/v3",
-      "/components/ram/ddr3",
-      "/components/ram/server-ddr3",
-      "/components/ram/ddr4",
-      "/components/videocards/all",
+      "/products/flowers/basic",
+      "/products/flowers/exotic",
+      "/products/vegetables/basic",
+      "/products/vegetables/exotic",
+      "/products/fruits/basic",
+      "/products/fruits/exotic",
+      "/products/other",
     ],
   },
   {

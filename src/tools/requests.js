@@ -1,12 +1,12 @@
 import db from "./firebase";
 import { errorToast } from "./toasts";
 import { normalizePath, sleep } from "./tools";
-import production from "./categories/production.json";
+import products from "./categories/production.json";
 import flowers from "./categories/flowers.json";
 import vegetables from "./categories/vegetables.json";
 import fruits from "./categories/fruits.json";
 
-const fetchCollection = async (collection) => {
+export const fetchCollection = async (collection) => {
   const snapshot = await db.collection(collection).get();
   return snapshot.docs.map((doc) => doc.data());
 };
@@ -18,50 +18,54 @@ export const fetchDoc = async (path) => {
 };
 
 const getOther = () => {
-  return fetchCollection("production/vegetables/basic");
+  return fetchCollection("products/vegetables/basic");
 };
 
 const getFruitsBasic = () => {
-  return fetchCollection("production/vegetables/basic");
+  return fetchCollection("products/vegetables/basic");
 };
 
 const getFruitsExotic = () => {
-  return fetchCollection("production/vegetables/basic");
+  return fetchCollection("products/vegetables/basic");
 };
 
 const getFlowersBasic = () => {
-  return fetchCollection("production/flowers/basic");
+  return fetchCollection("products/flowers/basic");
 };
 
 const getFlowersExostic = () => {
-  return fetchCollection("production/flowers/exotic");
+  return fetchCollection("products/flowers/exotic");
 };
 
 const getVegetablesBasic = () => {
-  return fetchCollection("production/vegetables/basic");
+  return fetchCollection("products/vegetables/basic");
 };
 
 const getVegetablesExotic = () => {
-  return fetchCollection("production/vegetables/exotic");
+  return fetchCollection("products/vegetables/exotic");
 };
 
-export const getproduction = (path) => {
+export const getAccounts = () => {
+  return fetchCollection("accounts");
+};
+
+export const getComponents = (path) => {
   const npath = normalizePath(path);
   switch (npath) {
-    case "/production/flowers/basic":
+    case "/products/flowers/basic":
       return getFlowersBasic();
-    case "/production/flowers/exotic":
+    case "/products/flowers/exotic":
       return getFlowersExostic();
-    case "/production/vegetables/basic":
+    case "/products/vegetables/basic":
       return getVegetablesBasic();
-    case "/production/vegetables/exotic":
+    case "/products/vegetables/exotic":
       return getVegetablesExotic();
-    case "/production/fruits/basic":
+    case "/products/fruits/basic":
       return getFruitsBasic();
-    case "/production/fruits/exotic":
+    case "/products/fruits/exotic":
       return getFruitsExotic();
-    case "/production/other":
-      return getVideocards();
+    case "/products/other":
+      return getOther();
     default:
       errorToast("Если видите эту ошибку, сообщите в поддержку в ВК");
   }
@@ -70,13 +74,13 @@ export const getproduction = (path) => {
 export const requestCategories = async (url) => {
   const nurl = normalizePath(url);
   switch (nurl) {
-    case "/production":
-      return await sleep(production, 300);
-    case "/production/flowers":
+    case "/products":
+      return await sleep(products, 300);
+    case "/products/flowers":
       return await sleep(flowers, 300);
-    case "/production/vegetables":
+    case "/products/vegetables":
       return await sleep(vegetables, 300);
-    case "/production/fruits":
+    case "/products/fruits":
       return await sleep(fruits, 300);
     default:
       errorToast("Если видите эту ошибку, сообщите в поддержку в ВК");

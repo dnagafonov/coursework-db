@@ -108,6 +108,9 @@ module.exports = {
     port: 8080,
     hot: isDev,
   },
+  node: {
+    fs: 'empty'
+  },
   plugins: plugins(),
   module: {
     rules: [

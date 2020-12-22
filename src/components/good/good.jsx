@@ -9,7 +9,7 @@ import { DiscussionEmbed } from "disqus-react";
 import "./good.scss";
 import { Space } from "antd";
 
-const Good = ({ good, url }) => {
+const Good = ({ good, account, url, addToCart }) => {
   return (
     <main className="good media1220">
       <Wrapper>
@@ -25,7 +25,7 @@ const Good = ({ good, url }) => {
         </Helmet>
         <BreadcrumbContainer />
         <Space size={10} direction="vertical">
-          <GoodInfo {...good} />
+          <GoodInfo good={good} account={account} addToCart={addToCart} />
           <DiscussionEmbed
             shortname="upgradepc"
             config={{

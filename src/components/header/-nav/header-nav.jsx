@@ -8,7 +8,7 @@ import "./header-nav.scss";
 const HeaderNav = () => {
   const pages = [
     //{ name: "Готовые сборки", href: "/sets" },
-    { name: "Комплектующие", href: "/components" },
+    { name: "продукция", href: "/products" },
     //{ name: "Игровые девайсы", href: "/devices" },
   ];
   return (

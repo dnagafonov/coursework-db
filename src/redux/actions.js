@@ -1,5 +1,7 @@
 import { types } from "./constants";
 import { errorToast } from "../tools/toasts";
+import * as firebase from "firebase/app";
+import db from "../tools/firebase";
 
 export const changeSortCriterion = (criterions, sortBy) => ({
   type: types.CHANGE_SORT_CRITERION,
@@ -11,6 +13,33 @@ export const setSortCriterion = (criterions, sortBy) => ({
   type: types.SET_SORT_CRITERION,
   criterions,
   sortBy,
+});
+
+export const getLogin = (data) => ({
+  type: types.GET_LOGIN,
+  data,
+});
+
+export const login = (data) => ({
+  type: types.LOGIN,
+  data,
+});
+
+export const addToCart = (id, data) => {
+  console.log(data);
+  db.collection("accounts")
+    .doc("" + id)
+    .update({
+      cart: firebase.firestore.FieldValue.arrayUnion(data),
+    });
+  return {
+    type: types.ADD_TO_CART,
+    data,
+  };
+};
+
+export const logout = () => ({
+  type: types.LOGOUT,
 });
 
 export const error = (msg) => {

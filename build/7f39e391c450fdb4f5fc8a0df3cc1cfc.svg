@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #61b15a;
+      }
+
+      .cls-2 {
+        font-size: 62.5px;
+        font-family: "Berlin Sans FB Demi";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <rect id="Прямоугольник_1" data-name="Прямоугольник 1" class="cls-1" x="-29" y="-28" width="43" height="182"/>
+  <rect id="Прямоугольник_2" data-name="Прямоугольник 2" class="cls-1" x="-52" y="-31" width="444" height="44"/>
+  <rect id="Прямоугольник_3" data-name="Прямоугольник 3" class="cls-1" x="-75" y="97" width="461" height="63"/>
+  <rect id="Прямоугольник_4" data-name="Прямоугольник 4" class="cls-1" x="-84" y="87" width="467" height="87"/>
+  <text id="iGarden" class="cls-2" x="78" y="93">iGarden</text>
+</svg>

@@ -6,15 +6,11 @@ import "./good-characteristics.scss";
 
 const GoodCharacteristics = ({ description }) => (
   <article className="good-characteristics">
-    <Note>Характеристики:</Note>
+    <Note>Описание:</Note>
     <div className="">
-      {description.split(`\\n`).map((e) => {
-        return (
-          <div className="pre good-characteristic" key={e}>
-            {e}
+          <div className="pre good-characteristic">
+            {description}
           </div>
-        );
-      })}
     </div>
   </article>
 );
